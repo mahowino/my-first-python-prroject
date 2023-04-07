@@ -1,3 +1,8 @@
+
+def getAreaOfACircle(radius=1,pi=3.14):
+    area=pi*radius*radius
+    return area
+
 def addTwoNumbers(num1,numb2):
     answer=num1+numb2
     return answer
@@ -12,3 +17,5 @@ total=addTwoNumbers(8,44)
 print(total)
 total=addTwoNumbers(3,77)
 print(total)
+area=getAreaOfACircle()
+print(area)

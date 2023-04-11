@@ -4,6 +4,8 @@ choices=["rock","paper","scissors"]
 
 #boolean
 isGameToBeContinued=True
+compScore=0
+userScore=0
 
 
 while isGameToBeContinued:
@@ -12,7 +14,7 @@ while isGameToBeContinued:
 
     #if you want to exit the game
     if selectedChoice not in choices:
-        exit()
+        break
 
     #make the computer make a selection
     selectedIndex=random.randint(0,2)
@@ -26,21 +28,38 @@ while isGameToBeContinued:
         print("draw")
     elif selectedChoice=="rock" and computerChoice=="paper":
         print("You have lost")
+        compScore+=1
     elif selectedChoice=="rock" and computerChoice=="scissors":
         print("you have won")
+        userScore+=1
     elif selectedChoice == "paper" and computerChoice == "paper":
         print("draw")
     elif selectedChoice == "paper" and computerChoice == "rock":
-        print("You have lost")
+        print("You have won")
+        userScore +=1
+
     elif selectedChoice == "paper" and computerChoice == "scissors":
         print("you have won")
+        compScore += 1
+
     elif selectedChoice == "scissors" and computerChoice == "scissors":
         print("draw")
     elif selectedChoice == "scissors" and computerChoice == "rock":
         print("You have lost")
+        compScore += 1
     elif selectedChoice == "scissors" and computerChoice == "paper":
         print("you have won")
+        userScore += 1
 
+    print("user score is ",userScore)
+    print("comp score is ",compScore)
+
+    if userScore==5 or compScore ==5:
+        if compScore==5:
+            print("computer wins")
+        else:
+            print("user wins")
+        break
 
 
 

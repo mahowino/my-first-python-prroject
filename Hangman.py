@@ -1,4 +1,5 @@
 import random
+import loops
 
 
 print("player 1")
@@ -7,7 +8,7 @@ word = input("choose the word to play with")
 
 # Initialize guesses
 guesses = ''
-
+print(loops.names)
 # Set the number of turns
 turns = 10
 
